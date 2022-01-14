@@ -8,11 +8,11 @@ const Laptop = (props) => {
   const btnText = show ? "Show less" : "Show more";
   return (
     <div>
-      <h1>{props.laptop.name}</h1>
+      <h2>{props.laptop.name}</h2>
       {show && (
         <>
           <p>{props.laptop.brand}</p>
-          <p>{props.laptop.weight}</p>
+          <p>{props.laptop.weigth}</p>
         </>
       )}
       <button onClick={toggle}>{btnText}</button>
