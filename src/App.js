@@ -28,7 +28,7 @@ function useSubtimer() {
   return show;
 }
 
-function search(e) {
+function useSearch(e) {
   const [laptops, setLaptops] = useState([]);
   const [searchText, setSearchText] = useState("");
   const handleSearch = (e) => {
@@ -44,7 +44,7 @@ function search(e) {
 const App = () => {
   const { loading, data } = useLaptops();
   const show = useSubtimer();
-  const {laptops, searchText, handleSearch} = search();
+  const {laptops, searchText, handleSearch} = useSearch();
 
   if (loading) {
     return <LoadingMask />;
